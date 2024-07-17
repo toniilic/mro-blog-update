@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <p>Votes: {{ post.votes }}</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="content">{{ post.content }}</textarea><br>
+        <input type="number" name="votes" value="{{ post.votes }}"><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
