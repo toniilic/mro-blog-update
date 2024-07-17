@@ -1,0 +1,17 @@
+<!-- blog/templates/blog/voting_results.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Results</title>
+</head>
+<body>
+    <h1>Voting Results</h1>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post.title }}: {{ post.votes }} votes</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
